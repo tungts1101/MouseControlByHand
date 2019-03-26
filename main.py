@@ -28,7 +28,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, wH)
 bX,bY,bW,bH = wW//2,0,wW//2,wH//2
 
 # background subtractor model
-fgbg = cv2.bgsegm.createBackgroundSubtractorCNT(minPixelStability=30,useHistory=True)
+fgbg = cv2.createBackgroundSubtractorMOG2()
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3))
 
 def calculateDistance(p1,p2):
