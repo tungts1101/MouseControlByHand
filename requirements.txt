@@ -1,0 +1,13 @@
+imutils==0.5.2
+numpy==1.16.2
+opencv-contrib-python==4.0.0.21
+opencv-python==4.0.0.21
+Pillow==5.4.1
+PyAutoGUI==0.9.42
+PyGetWindow==0.0.4
+PyMsgBox==1.0.6
+PyRect==0.1.4
+PyScreeze==0.1.20
+python-xlib==0.25
+PyTweening==1.0.3
+six==1.12.0
