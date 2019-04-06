@@ -86,7 +86,8 @@ def calculateFingers(cnt,frame):
 				extTop = tuple(cnt[cnt[:, :, 1].argmin()][0])
 				pos = extTop
 				cv2.circle(roi,extTop,8,(0,0,255),-1)
-			handle(fingers)
+			
+			return fingers
 	else:
 		pos = None	
 		return 0
@@ -145,8 +146,8 @@ while True:
 	cv2.drawContours(roi,[cnt],0,(255,255,0),2)
 	actions.append(calculateFingers(cnt,roi))
 	
-	if len(actions) > 10:
-		actions = actions[-10:]
+	if len(actions) > 20:
+		actions = actions[-20:]
 		action = get_action(actions)
 
 		handle(action)
